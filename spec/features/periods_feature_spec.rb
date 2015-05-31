@@ -28,6 +28,17 @@ feature 'Periods' do
       expect(page).to have_content 'La Traviata'
       expect(page).not_to have_content 'No periods available'
     end
+
+    context 'editing periods' do
+      scenario 'let a user edit a period' do
+       visit '/periods'
+       click_link 'Edit'
+       fill_in 'Production', with: 'La Boheme'
+       click_button 'Update Period'
+       expect(page).to have_content 'La Boheme'
+       expect(current_path).to eq '/periods'
+      end
+    end
   end
 
   context 'creating periods' do

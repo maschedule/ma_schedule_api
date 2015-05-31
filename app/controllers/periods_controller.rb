@@ -13,6 +13,16 @@ class PeriodsController < ApplicationController
     redirect_to periods_path
   end
 
+  def edit
+    @period = Period.find(params[:id])
+  end
+
+  def update
+    @period = Period.find(params[:id])
+    @period.update(period_params)
+    redirect_to periods_path
+  end
+
   def period_params
     params.require(:period).permit(:production, :city, :place, 
                                    :from, :to, :notes)
