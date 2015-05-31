@@ -1,10 +1,11 @@
 rvm: '2.2.1'
- addons:
-   code_climate:
-     repo_token: ENV['CODECLIMATE_REPO_TOKEN']
 
 script: bundle exec rspec spec
 script:
   - bundle exec bin/rake db:create
   - bundle exec bin/rake db:migrate
   - bundle exec rspec spec
+
+addons:
+  code_climate:
+    repo_token: ENV['CODECLIMATE_REPO_TOKEN']
