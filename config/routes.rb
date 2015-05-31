@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :periods
+  resources :periods do
+    resources :performances
+  end
 end

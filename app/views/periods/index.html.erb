@@ -3,6 +3,12 @@
     <%= period.production %>
     <%= link_to 'Edit', edit_period_path(period) %>
     <%= link_to 'Delete', period_path(period), method: :delete %>
+    <%= link_to 'Add Performance', new_period_performance_path(period) %>
+
+    <% period.performances.each do |performance| %>
+      <%= performance.date.strftime('%B %e %Y') %>
+      <%= performance.time.strftime('%H:%M') %>
+    <% end %>
   <% end %>
 <% else %>
   No periods available
