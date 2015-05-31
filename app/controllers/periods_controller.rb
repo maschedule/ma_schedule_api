@@ -32,6 +32,7 @@ class PeriodsController < ApplicationController
 
   def period_params
     params.require(:period).permit(:production, :city, :place, 
-                                   :from, :to, :notes)
+                                   :from, :to, :notes, 
+                                   performances_attributes: [:date, :time])
   end
 end
