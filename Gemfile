@@ -50,7 +50,7 @@ group :development, :test do
 
   gem 'coveralls', require: false
 
-  gem "codeclimate-test-reporter"
+  gem "codeclimate-test-reporter", require: nil
 
   gem 'rspec-rails'
   

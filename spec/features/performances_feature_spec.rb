@@ -25,9 +25,18 @@ feature 'Performance' do
     end
 
     scenario 'let a user edit a performance' do
+      click_link 'Edit Performance'
+      select '7', from: :performance_date_3i
+      select '20', from: :performance_time_4i
+      select '30', from: :performance_time_5i
+      click_button 'Update Performance'
+      expect(page).to have_content('June 7 2015 20:30')
     end
 
     scenario 'let a user delete a performance' do
+      click_link 'Delete Performance'
+      expect(page).not_to have_content('June 5 2015 21:00')
+      expect(page).to have_content 'Performance deleted successfully'
     end
   end
 

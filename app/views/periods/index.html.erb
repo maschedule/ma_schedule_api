@@ -8,6 +8,8 @@
     <% period.performances.each do |performance| %>
       <%= performance.date.strftime('%B %e %Y') %>
       <%= performance.time.strftime('%H:%M') %>
+      <%= link_to 'Edit Performance', edit_period_performance_path(period, performance) %>
+      <%= link_to 'Delete Performance', period_performance_path(period, performance), method: :delete %>
     <% end %>
   <% end %>
 <% else %>
