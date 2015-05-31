@@ -23,6 +23,13 @@ class PeriodsController < ApplicationController
     redirect_to periods_path
   end
 
+  def destroy
+    @period = Period.find(params[:id])
+    @period.destroy
+    flash[:notice] = 'Period deleted successfully'
+    redirect_to periods_path
+  end
+
   def period_params
     params.require(:period).permit(:production, :city, :place, 
                                    :from, :to, :notes)

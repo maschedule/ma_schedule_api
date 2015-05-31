@@ -39,6 +39,15 @@ feature 'Periods' do
        expect(current_path).to eq '/periods'
       end
     end
+
+    context 'deleting periods' do
+      scenario 'removes a period when a user clicks a delete link' do
+        visit '/periods'
+        click_link 'Delete'
+        expect(page).not_to have_content 'La Traviata'
+        expect(page).to have_content 'Period deleted successfully'
+      end
+    end
   end
 
   context 'creating periods' do

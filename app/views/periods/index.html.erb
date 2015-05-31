@@ -2,6 +2,7 @@
   <% @periods.each do |period| %>
     <%= period.production %>
     <%= link_to 'Edit', edit_period_path(period) %>
+    <%= link_to 'Delete', period_path(period), method: :delete %>
   <% end %>
 <% else %>
   No periods available
