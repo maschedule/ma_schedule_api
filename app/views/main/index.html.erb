@@ -1,0 +1,11 @@
+<% if @performances.any? %>
+  <% @performances.each do |performance| %>
+    <%= performance.period.production %>
+    <%= performance.date.strftime('%B %e %Y') %>
+    <%= performance.time.strftime('%H:%M') %>
+  <% end %>
+<% else %>
+  No performances available
+<% end %>
+
+<%= link_to 'Periods', periods_path %>

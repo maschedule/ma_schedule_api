@@ -39,5 +39,4 @@ feature 'Performance' do
       expect(page).to have_content 'Performance deleted successfully'
     end
   end
-
 end
