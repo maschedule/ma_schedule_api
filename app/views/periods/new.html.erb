@@ -1,0 +1,9 @@
+<%= simple_form_for @period do |f| %>
+  <%= f.input :production %>
+  <%= f.input :city %>
+  <%= f.input :place %>
+  <%= f.input :from %>
+  <%= f.input :to %>
+  <%= f.input :notes, as: :text %>
+  <%= f.button :submit %>
+<% end %>

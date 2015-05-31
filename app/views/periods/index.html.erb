@@ -1,1 +1,9 @@
-No periods available
+<% if @periods.any? %>
+  <% @periods.each do |period| %>
+    <%= period.production %>
+  <% end %>
+<% else %>
+  No periods available
+<% end %>
+
+<%= link_to 'Add a period', new_period_path %>
