@@ -20,6 +20,12 @@ feature 'Main Page' do
         click_link 'Periods'
         expect(current_path).to eq '/periods'
       end
+
+      scenario 'the page provide a link to add a period' do
+        visit '/main'
+        click_link 'Add Period'
+        expect(current_path).to eq '/periods/new'
+      end
     end
 
     context 'if a period and a performance has been added' do
