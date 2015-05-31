@@ -1,9 +1,9 @@
 <%= simple_form_for @period do |f| %>
-  <%= f.input :production %>
-  <%= f.input :city %>
-  <%= f.input :place %>
+  <%= f.input :production, placeholder: 'Production' %>
+  <%= f.input :city, placeholder: 'City' %>
+  <%= f.input :place, placeholder: 'Place' %>
   <%= f.input :from %>
   <%= f.input :to %>
-  <%= f.input :notes, as: :text %>
+  <%= f.input :notes, as: :text, placeholder: 'Notes' %>
   <%= f.button :submit %>
 <% end %>
