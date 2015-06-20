@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'main' => 'main#index'
-
-  resources :periods do
-    resources :performances
+  namespace :api do
+    resources :periods do
+      resources :performances
+    end
   end
 end
