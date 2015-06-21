@@ -8,7 +8,7 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/poltergeist'
 require 'support/database_cleaner'
-Capybara.javascript_driver = :poltergeist
+require 'support/factory_girl'
 CodeClimate::TestReporter.start
 Coveralls.wear!('rails')
 # Add additional requires below this line. Rails is not loaded until this point!

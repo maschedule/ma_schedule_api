@@ -27,6 +27,8 @@ gem 'simple_form'
 
 gem 'dot'
 
+gem 'rack-cors', require: 'rack/cors'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -61,5 +63,7 @@ group :development, :test do
   gem 'poltergeist'
 
   gem 'database_cleaner'
+
+  gem 'factory_girl_rails'
 end
 

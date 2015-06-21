@@ -1,8 +1,17 @@
 class Api::PerformancesController < Api::ApiController
   before_filter :find_period
 
+  def index
+    render json: @period.performances.all
+  end
+
+  def show
+    performance = @period.performances.find(params[:id])
+    render json: performance.as_json
+  end
+
   def create
-    performance = @period.performances.create(performance_params)
+    performance = @period.performances.new(performance_params)
     if performance.save
       render status: 200, json: {
         message: "Performance created successfully",

@@ -1,7 +1,8 @@
 class Api::PeriodsController < Api::ApiController
 
   def index
-    render json: Period.all
+    period = Period.all
+    render json: period.as_json(include:[:performances])
   end
 
   def show
