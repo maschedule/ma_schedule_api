@@ -20,7 +20,7 @@ describe "API for Performances", type: :request do
       post '/api/periods/1/performances', @performance
     end
 
-    it 'can get a list of performance' do
+    it 'can get a list of performances' do
       get '/api/periods/1/performances'
       expect(response).to be_success
       json = JSON.parse(response.body)
