@@ -1,6 +1,22 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/Armi/Code/progetti/ma_schedule/ma_schedule_api/app/controllers/concerns/authenticable.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
       "/Users/Armi/Code/progetti/ma_schedule/ma_schedule_api/app/models/performance.rb": [
         1,
         1,
@@ -9,6 +25,15 @@
       "/Users/Armi/Code/progetti/ma_schedule/ma_schedule_api/app/models/period.rb": [
         1,
         1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/Armi/Code/progetti/ma_schedule/ma_schedule_api/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
         1,
         null,
         1,
@@ -82,13 +107,6 @@
         1,
         null,
         null,
-        null
-      ],
-      "/Users/Armi/Code/progetti/ma_schedule/ma_schedule_api/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
         null
       ],
       "/Users/Armi/Code/progetti/ma_schedule/ma_schedule_api/app/controllers/api/periods_controller.rb": [
@@ -229,6 +247,6 @@
         null
       ]
     },
-    "timestamp": 1436173477
+    "timestamp": 1436187734
   }
 }

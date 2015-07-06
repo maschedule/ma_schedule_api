@@ -37,7 +37,6 @@ describe 'API for Sessions', type: :request do
 
   describe "DELETE #destroy" do
     before(:each) do
-      p @user.auth_token
       credentials = { email: @user.email, password: "12345678" }
       post "/api/sessions", { session: credentials }
       @user.reload

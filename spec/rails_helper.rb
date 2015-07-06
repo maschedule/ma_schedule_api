@@ -6,6 +6,7 @@ require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 require 'capybara/rails'
+require 'support/request_helpers'
 require 'support/database_cleaner'
 require 'support/factory_girl'
 CodeClimate::TestReporter.start
@@ -54,4 +55,10 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+  config.include Request::JsonHelpers, :type => :controller
+  config.include Request::HeadersHelpers, :type => :controller
+  config.include Devise::TestHelpers, :type => :controller
+  config.before(:each, type: :controller) do
+    include_default_accept_headers
+  end
 end
